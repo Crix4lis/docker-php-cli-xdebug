@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  cli:
+    build:
+      context: ./Docker
+    volumes:
+      - .:/usr/src/
+    stdin_open: true
+    tty: true

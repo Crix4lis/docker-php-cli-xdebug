@@ -2,10 +2,9 @@ FROM php:7.2-cli-alpine3.8
 
 # USER root - default anyway
 
-COPY Copy/bashrc /root/.bashrc
-COPY Copy/bash_aliases /root/.bash_aliases
-COPY Copy/sleep.sh /usr/local/bin/sleep
-# COPY Copy/php.ini /usr/local/etc/php/php.ini
+COPY Bash/bashrc /root/.bashrc
+COPY Bash/bash_aliases /root/.bash_aliases
+COPY Config/php.ini-development /usr/local/etc/php/php.ini
 
 WORKDIR /usr/src/
 
@@ -32,17 +31,9 @@ RUN apk add --no-cache \
 RUN pecl install xdebug-2.6.1 \
     && docker-php-ext-enable xdebug
 
+RUN cp $PHP_INI_DIR/php.ini-production $PHP_INI_DIR/php.ini
+
 RUN ls -l /usr/local/etc/php
-
-
-# to tylko do testów - wywalić
-# RUN ls -l /usr/local/etc/php/conf.d
-# RUN find -iname "*modules*"
-# RUN ls -l /usr/src
-
-# CMD ["sleep"]
-# CMD ["bash"]
-
 
 # ls -l /usr :
 # drwxr-xr-x    1 root     root          4096 Nov  4 21:11 bin

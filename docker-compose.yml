@@ -8,3 +8,5 @@ services:
       - .:/usr/src/
     stdin_open: true
     tty: true
+
+    

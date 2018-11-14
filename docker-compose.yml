@@ -5,8 +5,6 @@ services:
     build:
       context: ./Docker
     volumes:
-      - .:/usr/src/
+      - .:/code
     stdin_open: true
     tty: true
-
-    

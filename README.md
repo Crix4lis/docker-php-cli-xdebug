@@ -23,10 +23,11 @@ This repository contains running PHP CLI docker image with slightly extended [of
     - Can accept external connections is set to: `checked`
 1. Go to Languages & Frameworks > PHP > Servers and set up:
     - Name: `docker-xdebug-server`
-    - Port: `80` (does not matter)
+    - Host: does not matter
+    - Port: does not matter
     - Debugger: `Xdebug`
     - Use path mappings: `checked`
-    - Absolute path on the server: `/usr/src`
+    - Absolute path on the server: `/code`
 
 > DON'T FORGET: to start listening for PHP Debug connections in the IDE: <br>
 ![Start Listening for PHP Debug connections picture](https://cdn.deliciousbrains.com/content/uploads/2017/02/07162817/script-147_js_-_wp-migrate-db-pro_-____PLUGINS_wp-migrate-db-pro_.png "Listen for Debug connections")

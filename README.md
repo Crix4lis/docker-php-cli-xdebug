@@ -1,8 +1,8 @@
 
 > author: Michał Powała <br>
-> source repository: [Docker-PhpCli](https://github.com/Crix4lis/Docker-PhpCli)
+> source repository: [docker-php-cli-xdebug](https://github.com/Crix4lis/docker-php-cli-xdebug)
 
-# Docker-PhpCli
+# docker-php-cli-xdebug
 
 This repository contains running PHP CLI docker image with slightly extended [official php imgage](https://hub.docker.com/r/_/php/). It's extended with configured xDebug extension and installed Composer.
 

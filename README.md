@@ -4,7 +4,7 @@
 
 # docker-php-cli-xdebug
 
-This repository contains running PHP CLI docker image with slightly extended [official php imgage](https://hub.docker.com/r/_/php/). It's extended with configured xDebug extension and installed Composer.
+This repository contains running PHP CLI docker image with slightly extended [official php imgage](https://hub.docker.com/r/_/php/). It's extended with configured xDebug extension and installed Composer. The repostory is useful as basic image for any PHP application. Use Composer to download needed dependencies, libraries or PHP frameworks like Symfony.
 
 ## HOW TO USE IT
 1. Install Docker: [OFFICIAL INSTRUCTION](https://docs.docker.com/install/linux/docker-ce/ubuntu/#install-using-the-repository)

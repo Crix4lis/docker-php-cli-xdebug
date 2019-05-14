@@ -3,8 +3,8 @@ version: "3"
 services:
   cli:
     build:
-      context: ./Docker
+      context: ./docker
     volumes:
-      - .:/code
+      - .:/volume
     stdin_open: true
     tty: true

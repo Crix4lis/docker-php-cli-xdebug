@@ -28,19 +28,19 @@ RUN pecl install xdebug-2.6.1 \
     && docker-php-ext-install zip
 
 # Configure bash and aliases
-COPY Bash/bashrc /home/dockeruser/.bashrc
-COPY Bash/bash_aliases /home/dockeruser/.bash_aliases
+COPY bash/bashrc /home/dockeruser/.bashrc
+COPY bash/bash_aliases /home/dockeruser/.bash_aliases
 # Configure php and extensions
-COPY Config/php.ini-development /usr/local/etc/php/php.ini
-COPY Config/xdebug.ini /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+COPY config/php.ini-development /usr/local/etc/php/php.ini
+COPY config/xdebug.ini /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 
 # Configure xDebug server
 ENV PHP_IDE_CONFIG "serverName=docker-xdebug-server"
 
 # Create volume and default dir
-RUN mkdir /code
-WORKDIR /code
-VOLUME /code
+RUN mkdir /volume
+WORKDIR /volume
+VOLUME /volume
 
 # set default user to dockeruser
 USER dockeruser
